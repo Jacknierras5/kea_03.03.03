@@ -1,0 +1,270 @@
+:root {
+    font-size: 2vw;
+}
+
+body {
+    margin: 0;
+}
+
+#screen {
+    background-image: url("gulv_baggrund.svg");
+    background-size: cover;
+    width: 98.5vw;
+    height: 55vw;
+    margin: auto;
+
+    position: absolute;
+    z-index: 5;
+}
+
+#menu_setting {
+    background-image: url("settings.svg");
+    background-size: cover;
+
+    width: 20vw;
+    height: 10vw;
+
+    position: absolute;
+    left: 17vw;
+    top: 14.1vw;
+
+    z-index: 10;
+    display: none;
+
+}
+
+#start {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 56.25vw;
+    background-image: url(titleside_stor_ninja.svg);
+    background-size: 100%;
+}
+
+#play {
+    position: absolute;
+    z-index: 10;
+
+    width: 20vw;
+    height: 20vw;
+    background-image: url(run.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    left: 45vw;
+    top: 28vw;
+
+    cursor: pointer;
+}
+
+/* effekter */
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.blur {
+    filter: blur(5px) brightness(80%);
+}
+
+.fade_out {
+    animation-name: fadeout_kf;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout_kf {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.pulse {
+    animation-name: pulse_kf;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(0.75);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ------------------- Karakter ---------- */
+
+#ninja_løber {
+    background-image: url(ninja_sprinting.svg);
+    background-repeat: no-repeat;
+
+    width: 18vw;
+    height: 17vw;
+
+    position: absolute;
+    left: 74vw;
+    top: 37.4vw;
+    z-index: 10;
+
+}
+
+
+.sprinting {
+    animation-name: sprinting;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes sprinting {
+
+    0% {
+
+        left: 10vw;
+
+    }
+
+    25% {
+        left: 73vw;
+
+    }
+
+    50% {
+        left: 10vw;
+
+    }
+
+    75% {
+        left: 73vw;
+
+    }
+
+    100% {
+        left: 10vw;
+
+    }
+
+
+}
+
+/* ------------------- Barrell ---------- */
+
+
+#barrell {
+    background-image: url(barrell.svg);
+    background-repeat: no-repeat;
+
+    width: 4vw;
+    height: 4vw;
+
+    position: absolute;
+    left: 56vw;
+    top: -1vw;
+    transform: rotate(49deg);
+    z-index: 10;
+}
+
+#barrell2 {
+    background-image: url(barrel_smadret.svg);
+    background-repeat: no-repeat;
+
+    width: 3vw;
+    height: 5vw;
+
+    position: absolute;
+    left: 37vw;
+    top: -5vw;
+    transform: rotate(70deg);
+    z-index: 10;
+}
+
+#barrell3 {
+    background-image: url(barrell-kopi.svg);
+    background-repeat: no-repeat;
+
+    width: 4vw;
+    height: 4vw;
+
+    position: absolute;
+    left: 60vw;
+    top: -10vw;
+    transform: rotate(10deg);
+    z-index: 10;
+}
+
+.fall {
+    animation-name: fall;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes fall {
+
+    100% {
+        transform: translateY(74vw)translateY(-10vw)
+    }
+
+
+
+
+    #game_background {
+        background-image: url("gulv_baggrund.svg");
+        background-size: cover;
+        width: 98.5vw;
+        height: 55vw;
+        margin: auto;
+
+        position: absolute;
+        z-index: 1;
+
+    }
+
+    /* ------------------- Gameplay settings kanp ---------- */
+
+    #game_ui {
+        background-image: url(settings.svg);
+        background-repeat: no-repeat;
+
+        width: 10vw;
+        height: 10vw;
+
+        position: absolute;
+        z-index: 11;
+        left: 15vw;
+        top: 15vw;
+        z-index: 10;
+    }
+
+    /* ------------------------- HIGHSCORE ------------------ */
+
+    #points {
+        background-image: url(score.svg);
+        background-repeat: no-repeat;
+
+        width: 10vw;
+        height: 10vw;
+
+        position: absolute;
+        left: 61vw;
+        top: 4.5vw;
+        z-index: 4;
+    }
